@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários em HTML</title>
+    <style>
+        label{
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <form name="cadastro" method="post" action="cadastro.php">
+          <!--Required, vai trazer a obrigatoriedade de preenchimento-->
+
+          <fieldset id="dados-pessoais">
+            <!-- fildset agrupa os elementos-->
+
+            <legend>Dados pessoais:</legend>
+
+            <div id="nome">
+
+              <label for="name">Nome:</label>
+              <!--Label serve para relacionar com o input, ex: for relacionado com o id (com o mesmo nome)-->
+
+              <input type="text" placeholder="Seu Nome:" required id="name" />
+              <!-- Cadastrar da o nome pro botão de enviar (submit)-->
+            </div>
+
+            <div id="email">
+
+            <label for="cp-email">Email:</label>
+
+            <input type="email" placeholder="Seu email:" required id="cp-email" />
+
+            </div>
+
+            <div id="whatsapp">
+
+                <!--O atributo pattern serve para verificar se o número está dentro dos padrões, ex: de 0 a 9, e são os 2 primeiros números (ddd)-->
+                <label>Whatsapp:</label>
+                <input type="tel" placeholder="99-99999-9999" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required>
+            
+            </div>
+
+            <div id="genero">
+                <label>Gênero:</label>
+                <!--Name é necessário ser do mesmo grupo, nesse caso, o grupo Genero-->
+                <input type="radio" value="masculino" name="genero"> <span>Masculino</span>
+                <input type="radio" value="feminino" name="genero"> <span>Feminino</span>
+                <!-- atributo RADIO, serve para marcar apenas UMA opção-->
+            </div>
+
+            <div id="interesse">
+
+                <label>Área de Interesse</label>
+                <input type="checkbox" name="interesse" value="TI"> <span>Tecnologia da Informação</span>
+
+                <input type="checkbox" name="comercial" value="comercial"> <span>Comercial</span>
+
+                <input type="checkbox" name="financeiro" value="financeiro"> <span>Financeiro</span>
+
+                <!--atributo CHECKBOX, serve para marcar UMA ou MAIS opções-->
+            </div>
+
+            <div id="cidade">
+                <label for="cp-cidade">Cidade:</label>
+                <input type="text" placeholder="Cidade:" required>
+            </div>
+
+            <div id="estado">
+                <label>Estado:</label>
+                <select name="uf">
+                    <option value="Santa Catarina">SC</option>
+                    <option value="Sao Paulo">SP</option>
+                    <option value="Goiás">GO</option>
+                    <option value="Minas Gerais">MG</option>
+                    <option value="Rio de Janeiro">RJ</option>
+
+                    
+                </select>
+            </div>
+
+            <div id="observacoes">
+                <!--Textarea serve para criar a caixa, e o rows determina o tamanho -->
+                <label>Observações:</label>
+                <textarea rows="5"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset id="dados-pessoa-juridica">
+            <legend>Dados de Pessoa Jurídica</legend>
+
+            <div id="razao-social">
+                <label for="razaosocial">Razão Social</label>
+                <input type="text" id="razaosocial" placeholder="Razão Social" required>
+            </div>
+
+            <div id="nome-fantasia">
+                <label for="nomefantasia">Nome Fantasia</label>
+                <input type="text" id="nomefantasia" placeholder="Nome Fantasia" required>
+            </div>
+
+            <div id="cnpj">
+                <label for="cp-cnpj">CNPJ</label>
+                <input type="text" id="cp-cnpj" placeholder="CNPJ" required>
+            </div>
+
+            <div id="ie">
+                <label for="cp-ie">Inscrição Estadual</label>
+                <input type="text" id="cp-ie" placeholder="Inscrição Estadual" required>
+
+                <input type="checkbox" value="isento-ie"><span>Isento de Inscrição Estadual</span>
+            </div>
+
+            
+          </fieldset>
+          <input type="submit" value="Cadastrar" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

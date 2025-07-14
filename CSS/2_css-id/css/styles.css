@@ -1,0 +1,23 @@
+
+/* seletor *, quer dizer que a formatação é para a página inteira*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+/* para estilizar ID, colocasse # antes*/
+#destaque {
+    color: #0FF;
+}
+
+/* para estilizar Classe, colocasse . antes */
+.tecnologia{
+    color: #F00;
+    font-size: 40px;
+}

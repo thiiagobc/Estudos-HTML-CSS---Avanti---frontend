@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        table, th, td{
+            border: 1px solid #AAA;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <table>
+                <thead> <!--Cabeça da tabela-->
+                    <tr> <!--linhas-->
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Curso</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody> <!--Corpo da tabela-->
+                    <tr>
+                        <td> <!-- texto simples sem negrito-->
+                            01
+                        </td>
+                        <td>João</td>
+                        <td>HTML</td>
+                        <td>Aprovado</td>    
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Maria</td>
+                        <td>HTML</td>
+                        <td>Aprovado</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Pedro</td>
+                        <td>HTML</td>
+                        <td>Aprovado</td>
+                    </tr>
+                </tbody>
+                <tfoot> <!--Rodapé da tabela-->
+                    <tr>
+                        <td colspan="2">Curso FrontEnd</td> <!--Colspan, quer dizer a quantidade de células que vai ocupar-->
+                        <td colspan="2">Pense Avanti</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+    </main>
+</body>
+</html>
